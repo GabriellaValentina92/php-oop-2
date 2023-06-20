@@ -1,7 +1,5 @@
 <?php
 
-include __DIR__ . '/classes/Products.php';
-
 ?>
 
 <!DOCTYPE html>
