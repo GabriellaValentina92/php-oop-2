@@ -1,57 +1,30 @@
 <?php 
-include __DIR__ . '/Products.php';
+include_once __DIR__ . '/Products.php';
 
 class Kennel extends Products {
-    private int $kennelSize;
-    private string $materials;
-    private string $colors;
-    private int $quantity;
+    public int $kennelSize;
+    public string $materials;
+    public string $colors;
+    public int $quantity;
 
-    public function __construct($kennelSize, $materials, $colors, $quantity){
-        $this-> setSize($kennelSize);
-        $this-> setMaterials($materials);
-        $this-> setColors($colors);
-        $this-> setQuantity($quantity);
-    }
-
-    public function setSize($kennelSize){
-        $this->kennelSize = $kennelSize;
-    }
-
-    public function getSize(){
-        return $this->kennelSize;
-    }
-
-    public function setMaterials($materials){
-        $this->materials = $materials;
-    }
-
-    public function getMaterials(){
-        return $this->materials;
-    }
-
-    public function setColors($colors){
-        $this->colors = $colors;
-    }
-
-    public function getColor(){
-        return $this->colors;
-    }
-
-    public function setQuantity($quantity){
-        if(!$quantity > 0){
-            die('seleziona almeno un prodotto');
-        }
-        $this->quantity = $quantity;
-    }
-
-    public function getQuantity(){
-        return $this->quantity;
+    public function __construct($kennelSize, $materials, $colors, $quantity)
+    {
+        parent::__construct($nameproduct, $category, $price, $description, $discount);
+        $this-> kennelSize = $kennelSize;
+        $this-> materials = $materials;
+        $this-> colors = $colors;
+        $this-> quantity = $quantity;
     }
 }
 
 $kennels = new kennel(
+    'DogHouse',
+    'Dog/Cat',
+    '2000',
+    'Cuccetta morbida e confortevole per i vostri animali',
+    '20%',
     'small, medium, large, extraLarge', 
     'legno,plastica, poliestere', 
     'marrone, nero, blu, grigio, bianco', 
-    '1');
+    '1'
+);
