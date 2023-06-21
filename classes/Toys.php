@@ -2,11 +2,11 @@
 include_once __DIR__ . '/Products.php';
 
 class Toys extends Products {
-    private string $bestseller;
-    private string $puppytoys;
-    private string $seniortoys;
+    public string $bestseller;
+    public string $puppytoys;
+    public string $seniortoys;
 
-    public function __construct($bestseller, $puppytoys, $seniortoys)
+    public function __construct($nameproduct, $category, $price, $description, $discount, $bestseller, $puppytoys, $seniortoys)
     {
         parent::__construct($nameproduct, $category, $price, $description, $discount);
         $this-> bestseller = $bestseller;

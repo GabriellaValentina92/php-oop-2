@@ -4,7 +4,7 @@ class Products {
     protected string $category;
     protected int $price;
     protected string $description;
-    protected int $discount;
+    protected string $discount;
 
     public function __construct($nameproduct, $category, $price, $description, $discount)
     {
@@ -18,5 +18,5 @@ class Products {
     
 }
 
-$product = new Products('', 'Dog/Cat', '', '', '', '');
+$product = new Products('', 'Dog/Cat', '3000', 'Prodotti Animali', '20%');
 var_dump($product);

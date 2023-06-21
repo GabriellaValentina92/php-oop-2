@@ -10,7 +10,7 @@ $foods = new Food (
     'Monge croccantini salutari che danno energia',
     '20%',
     'carboidrati, proteine, grassi, zuccheri',
-    '450kcal', 
+    '450', 
     '350g, 500g, 750g, 1kg, 3kg, 5kg'
 );
 

@@ -2,12 +2,12 @@
 include_once __DIR__ . '/Products.php';
 
 class Kennel extends Products {
-    public int $kennelSize;
+    public string $kennelSize;
     public string $materials;
     public string $colors;
     public int $quantity;
 
-    public function __construct($kennelSize, $materials, $colors, $quantity)
+    public function __construct($nameproduct, $category, $price, $description, $discount, $kennelSize, $materials, $colors, $quantity)
     {
         parent::__construct($nameproduct, $category, $price, $description, $discount);
         $this-> kennelSize = $kennelSize;
